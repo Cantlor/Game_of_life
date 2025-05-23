@@ -1,6 +1,7 @@
 #include "input.h"
 
-bool handle_events(Game& game, bool& running, bool& paused, const Config& config) {
+bool handle_events(Game& game, bool& running, bool& paused, const Config& config) 
+{
     SDL_Event event;
     while (SDL_PollEvent(&event)) 
     {

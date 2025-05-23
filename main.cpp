@@ -5,19 +5,31 @@
 #include "renderer.h"
 #include "input.h"
 
-Config parse_args(int argc, char* argv[]) {
+Config parse_args(int argc, char* argv[]) 
+{
     Config config;
-    for (int i = 1; i < argc; ++i) {
+    for (int i = 1; i < argc; ++i) 
+    {
         std::string arg = argv[i];
-        if (arg == "--rows" && i + 1 < argc) config.rows = std::stoi(argv[++i]);
-        else if (arg == "--cols" && i + 1 < argc) config.cols = std::stoi(argv[++i]);
-        else if (arg == "--fps" && i + 1 < argc) config.fps = std::stoi(argv[++i]);
+        if (arg == "--rows" && i + 1 < argc)
+        { 
+            config.rows = std::stoi(argv[++i]);
+        }
+        else if (arg == "--cols" && i + 1 < argc)
+        { 
+            config.cols = std::stoi(argv[++i]);
+        }
+        else if (arg == "--fps" && i + 1 < argc)
+        {
+            config.fps = std::stoi(argv[++i]);
+        }
     }
     config.cell_size = config.window_width / config.cols;
     return config;
 }
 
-int main(int argc, char* argv[]) {
+int main(int argc, char* argv[]) 
+{
     Config config = parse_args(argc, argv);
     Game game(config.rows, config.cols);
     Renderer renderer(config);
