@@ -34,6 +34,6 @@ target_include_directories(GameOfLife_lib PUBLIC "${PROJECT_SOURCE_DIR}/include"
 
 
 # Application
-add_executable(${PROJECT_NAME} src/main.cpp)  
+add_executable(${PROJECT_NAME} main.cpp)  
 target_link_libraries(${PROJECT_NAME} PRIVATE GameOfLife_lib ${SDL2_LIBRARY})
 target_include_directories(${PROJECT_NAME} PRIVATE ${SDL2_INCLUDE_DIR})
