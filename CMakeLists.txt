@@ -26,12 +26,9 @@ else()
 endif()
 
 
-set(SRCS
-    src/game.cpp
-    src/input.cpp
-    src/render.cpp
-)
-add_library(GameOfLife_lib STATIC ${SRCS})
+file(GLOB_RECURSE SRC_FILES CONFIGURE_DEPENDS "src/*.cpp")
+
+add_library(GameOfLife_lib STATIC ${SRC_FILES})
 target_include_directories(GameOfLife_lib PUBLIC "${PROJECT_SOURCE_DIR}/include")
 
 
