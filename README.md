@@ -35,30 +35,39 @@
 
 ```bash
 sudo apt install libsdl2-dev
-
+```
 
 ### 🍎 macOS (через Homebrew)
+```bash
 brew install sdl2
-
+```
 
 ### 🪟 Windows (через vcpkg)
+```bash
 .\vcpkg install sdl2
 cmake .. -DCMAKE_TOOLCHAIN_FILE=C:/path/to/vcpkg/scripts buildsystems/vcpkg.cmake
+```
+
+
+
 Или скачайте SDL2 Development Library и укажите путь вручную:
+```bash
 cmake .. -DSDL2DIR="C:/libs/SDL2"
+```
 
 🧱 Сборка проекта
-bash
-Копировать
-Редактировать
-git clone <this-repo-url>
+```bash
+git clone https://github.com/Cantlor/Game_of_life.git
 cd game_of_life
 mkdir build && cd build
 cmake ..        # или cmake .. -DSDL2DIR=...
 cmake --build .
-▶️ Запуск
+```
 
+▶️ Запуск
+```bash
 ./GameOfLife --rows m --cols n --fps k (m,n,k - целые положительные числа)
+```
 
 
 🎮 Управление
