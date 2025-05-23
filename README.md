@@ -17,10 +17,37 @@ This is my first README.md
 
 Это реализация клеточного автомата "Игра Жизнь" на языке C++ с использованием библиотеки SDL2 для графического вывода.
 
+
+
+
+
+
 ## 🔧 Зависимости
-- CMake >= 3.10
+- CMake >= 3.28
 - C++17
 - SDL2 (установить через пакетный менеджер: `libsdl2-dev` на Ubuntu)
+Что делать для каждой ОС:
+🐧 Linux
+bash
+Копировать
+Редактировать
+sudo apt install libsdl2-dev
+mkdir build && cd build
+cmake ..
+make
+./GameOfLife
+
+
+
+brew install sdl2
+mkdir build && cd build
+cmake ..
+make
+./GameOfLife
+
+
+.\vcpkg install sdl2
+cmake .. -DCMAKE_TOOLCHAIN_FILE=D:/path/to/vcpkg/scripts/buildsystems/vcpkg.cmake
 
 ## 🧱 Сборка проекта
 ```bash

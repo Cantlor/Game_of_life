@@ -1,10 +1,7 @@
 // main.cpp
-#include <SDL2/SDL.h>
 #include <iostream>
 #include <chrono>
 #include <thread>
-#include "config.h"
-#include "game.h"
 #include "renderer.h"
 #include "input.h"
 
