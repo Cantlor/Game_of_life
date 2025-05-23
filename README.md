@@ -42,15 +42,20 @@ sudo apt install libsdl2-dev
 brew install sdl2
 ```
 
-### 🪟 Windows (через vcpkg)
+### 🪟 Windows  
+✅ Вариант 1: (через vcpkg)
 ```bash
 .\vcpkg install sdl2
 cmake .. -DCMAKE_TOOLCHAIN_FILE=C:/path/to/vcpkg/scripts buildsystems/vcpkg.cmake
 ```
+✅ Вариант 2: вручную
 
+Скачайте SDL2-devel-2.x.x-VC.zip (https://github.com/libsdl-org/SDL/releases/tag/release-3.2.14)
 
+Распакуйте в C:/libs/SDL2
 
-Или скачайте SDL2 Development Library и укажите путь вручную:
+Собирайте с указанием пути:
+
 ```bash
 cmake .. -DSDL2DIR="C:/libs/SDL2"
 ```

@@ -4,14 +4,6 @@ project(GameOfLife)
 
 #(FindSDL2.cmake)
 set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
-
-# Use it for direct connect
-# Windows PATH SDL2
-#set(SDL2DIR "PATH_TO_SDL2") e.g. PATH_TO_SDL2 = C:/libs/SDL2
-
-# LINUX/MACOS
-# set(SDL2DIR "/home/user/libs/SDL2")
-# Найти SDL2 (наш FindSDL2.cmake поддерживает переменную SDL2DIR)
 find_package(SDL2 REQUIRED)
 
 
@@ -29,7 +21,11 @@ endif()
 file(GLOB_RECURSE SRC_FILES CONFIGURE_DEPENDS "src/*.cpp")
 
 add_library(GameOfLife_lib STATIC ${SRC_FILES})
-target_include_directories(GameOfLife_lib PUBLIC "${PROJECT_SOURCE_DIR}/include")
+target_include_directories(GameOfLife_lib 
+                    PUBLIC 
+                        "${PROJECT_SOURCE_DIR}/include"
+                        ${SDL2_INCLUDE_DIR}
+                        )
 
 
 
