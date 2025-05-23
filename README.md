@@ -59,13 +59,13 @@ cmake .. -DSDL2DIR="C:/libs/SDL2"
 ```bash
 git clone https://github.com/Cantlor/Game_of_life.git
 cd game_of_life
-mkdir build && cd build
-cmake ..        # или cmake .. -DSDL2DIR=...
-cmake --build .
+cmake . -B bld
+cmake --build bld  
 ```
 
 ▶️ Запуск
 ```bash
+cd bld
 ./GameOfLife --rows m --cols n --fps k (m,n,k - целые положительные числа)
 ```
 
