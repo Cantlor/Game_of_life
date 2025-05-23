@@ -30,7 +30,6 @@ set(SRCS
     src/game.cpp
     src/input.cpp
     src/render.cpp
-    src/main.cpp
 )
 add_library(GameOfLife_lib STATIC ${SRCS})
 target_include_directories(GameOfLife_lib PUBLIC "${PROJECT_SOURCE_DIR}/include")
